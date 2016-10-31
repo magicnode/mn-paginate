@@ -1,6 +1,6 @@
 {
   "name": "mn-paginate",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "common paginate func use in server",
   "main": "paginate.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "getpaginate"
   ],
   "author": "magicz",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/magicnode/mn-paginate/issues"
   },

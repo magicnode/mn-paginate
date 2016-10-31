@@ -1,0 +1,43 @@
+<div class="dataTables_info">
+    <% if (rows === 0) {%>
+        没有找到匹配的数据
+    <% }else{%>
+        显示
+        <%= (page-1) * rows +1 %>
+
+        到
+            <% if (!isLastPage) { %>
+                <%= page * rows  %>
+            <% }else{%>
+                <%= totaldata %>
+            <%}%>
+            条,共:
+                <%= totaldata %>条
+    <%}%>
+</div>
+
+<div class="dataTables_paginate paging_simple_numbers foowala_paginate">
+  <% if (!isFirstPage) { %>
+     <button class="paginate_button previous" value="<%= page-1 %>">上一页</button>
+  <% }else{%>
+     <button class="paginate_button previous disabled" value="-1">上一页</button>
+  <%}%>
+  <span>
+    <% for(var i=0; i< total; i++) {%>
+        <% if ( i+1 === page ) { %>
+            <button value="<%= i + 1 %>" class="paginate_button current">
+        <% }else{%>
+            <button class="paginate_button" value="<%= i + 1 %>">
+           <%}%>
+                <%= i + 1 %>
+            </button>
+    <% } %>
+
+  </span>
+
+  <% if (!isLastPage) { %>
+     <button class="paginate_button next"  value="<%= page+1 %>">下一页</button>
+  <% }else{%>
+     <button class="paginate_button next disabled" value="-1">下一页</button>
+  <%}%>
+</div>
